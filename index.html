@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vân Hữu Gia Khánh - Digital Marketing Specialist</title>
+    <title>Văn Hữu Gia Khánh - Digital Marketing Specialist</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for icons -->
@@ -150,9 +150,26 @@
             border-color: #3b82f6;
             color: white;
         }
-        .project-card img {
+        .project-card .img-container {
             aspect-ratio: 16 / 10;
+            background-color: #111827;
+        }
+        .project-card img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+        }
+        .project-card img.object-contain {
+            object-fit: contain;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -187,8 +204,8 @@
             <section id="home" class="min-h-screen flex items-center relative overflow-hidden bg-transparent pt-24">
                 <div class="container mx-auto px-6 text-center hero-content">
                     <div class="max-w-4xl mx-auto">
-                        <img src="https://placehold.co/200x200/1f2937/FFFFFF?text=GK" alt="Vân Hữu Gia Khánh" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-gray-700 tech-glow">
-                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">Vân Hữu Gia Khánh</h1>
+                        <img src="https://i.postimg.cc/kg9x3s68/1715968481183.jpg" alt="Văn Hữu Gia Khánh" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-gray-700 tech-glow object-cover">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">Văn Hữu Gia Khánh</h1>
                         <p class="text-xl md:text-2xl text-blue-400 font-semibold mb-8">Digital Marketing Specialist</p>
                         <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10">
                             Chuyên gia về SEO & Social Media, giúp thương hiệu tăng trưởng đột phá trên nền tảng số.
@@ -200,11 +217,11 @@
                 </div>
             </section>
 
-            <section id="about" class="py-16 md:py-24">
+            <section id="about" class="py-16 md:py-24 fade-in-section">
                 <div class="container mx-auto px-6">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="relative">
-                            <img src="https://placehold.co/600x750/1f2937/FFFFFF?text=About+Me" alt="Vân Hữu Gia Khánh" class="rounded-lg w-full h-auto tech-glow">
+                            <img src="https://i.postimg.cc/1tgFcY2x/470203589-122100468614662065-7168511639420839223-n.jpg" alt="Văn Hữu Gia Khánh" class="rounded-lg w-full h-auto tech-glow">
                         </div>
                         <div>
                             <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">Về bản thân</h2>
@@ -229,7 +246,7 @@
                                 </div>
                             </div>
                             <div class="flex space-x-4 mt-8">
-                                <a href="mailto:khanhvhg2003.forwork@gmail.com" class="btn btn-primary font-semibold py-3 px-6 rounded-lg">
+                                <a href="mailto:khanhvhg2003@gmail.com" class="btn btn-primary font-semibold py-3 px-6 rounded-lg">
                                    <i class="fas fa-envelope mr-2"></i> Gửi Email
                                 </a>
                                 <a href="#" class="btn btn-secondary font-semibold py-3 px-6 rounded-lg">
@@ -241,7 +258,7 @@
                 </div>
             </section>
 
-            <section id="skills" class="py-16 md:py-24 bg-black bg-opacity-50">
+            <section id="skills" class="py-16 md:py-24 bg-black bg-opacity-50 fade-in-section">
                 <div class="container mx-auto px-6">
                     <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Kỹ năng chuyên môn</h2>
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-12">
@@ -255,8 +272,7 @@
                 </div>
             </section>
 
-            <!-- CHANGE: Experience section updated with full details from CV -->
-            <section id="experience" class="py-16 md:py-24">
+            <section id="experience" class="py-16 md:py-24 fade-in-section">
                 <div class="container mx-auto px-6">
                     <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Hành trình sự nghiệp</h2>
                     <div class="relative mt-12 max-w-3xl mx-auto">
@@ -320,7 +336,7 @@
                 </div>
             </section>
 
-            <section id="projects" class="py-16 md:py-24 bg-black bg-opacity-50">
+            <section id="projects" class="py-16 md:py-24 bg-black bg-opacity-50 fade-in-section">
                 <div class="container mx-auto px-6">
                     <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Các dự án nổi bật</h2>
                     <div id="filters" class="flex flex-wrap justify-center gap-2 md:gap-4 my-8">
@@ -335,28 +351,29 @@
                 </div>
             </section>
 
-            <section id="contact" class="py-16 md:py-24">
+            <section id="contact" class="py-16 md:py-24 fade-in-section">
                 <div class="container mx-auto px-6 text-center">
-                    <img src="https://placehold.co/200x200/1f2937/FFFFFF?text=GK" alt="Vân Hữu Gia Khánh" class="w-24 h-24 rounded-full mx-auto mb-8 border-4 border-gray-700 tech-glow">
+                    <!-- CHANGE: Avatar size increased -->
+                    <img src="https://i.postimg.cc/kg9x3s68/1715968481183.jpg" alt="Văn Hữu Gia Khánh" class="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-gray-700 tech-glow object-cover">
                     <h2 class="section-title text-3xl md:text-4xl font-bold">Kết nối với tôi</h2>
                     <p class="text-lg text-gray-300 max-w-2xl mx-auto mt-4 mb-8">
                         Tôi luôn sẵn sàng cho những cơ hội mới và các dự án thú vị. Đừng ngần ngại liên hệ!
                     </p>
                     <div class="flex justify-center items-center space-x-6 text-3xl">
-                        <a href="mailto:khanhvhg2003.forwork@gmail.com" class="hover:text-blue-400 transition-colors"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+84899245418" class="hover:text-blue-400 transition-colors"><i class="fas fa-phone"></i></a>
-                        <a href="#" class="hover:text-blue-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/queenbus.com.vn" target="_blank" class="hover:text-blue-400 transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:khanhvhg2003@gmail.com" class="hover:text-blue-400 transition-colors"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:0899245418" class="hover:text-blue-400 transition-colors"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/in/gia-kh%C3%A1nh-v%C4%83n-h%E1%BB%AFu-2639ba26b/" target="_blank" class="hover:text-blue-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/giakhanh021003/" target="_blank" class="hover:text-blue-400 transition-colors"><i class="fab fa-facebook"></i></a>
                     </div>
-                     <p class="mt-8 text-gray-400">Email: khanhvhg2003.forwork@gmail.com</p>
-                     <p class="text-gray-400">Phone: (+84) 899 245 418</p>
+                     <p class="mt-8 text-gray-400">Email: khanhvhg2003@gmail.com</p>
+                     <p class="text-gray-400">Phone: 0899 245 418</p>
                 </div>
             </section>
         </main>
 
         <footer class="bg-black bg-opacity-50 py-6">
             <div class="container mx-auto px-6 text-center text-gray-500">
-                <p>&copy; 2025 Vân Hữu Gia Khánh. All Rights Reserved.</p>
+                <p>&copy; 2025 Văn Hữu Gia Khánh. All Rights Reserved.</p>
             </div>
         </footer>
     </div>
@@ -437,18 +454,19 @@
         observer.observe(statsSection);
 
         const projects = [
-            { category: 'seo', title: 'SEO Website Queen Bus', desc: 'Tăng trưởng traffic từ 0 lên 2,000/tháng và lợi nhuận tăng 461% trong 2 tháng.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+tăng+trưởng+Queen+Bus', url: 'https://queenbus.com.vn/' },
-            { category: 'seo', title: 'SEO Website TechDictionary', desc: 'Phục hồi website sau án phạt Google, tăng traffic 19,200% (10 -> 1,900/ngày).', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+tăng+trưởng+TechDictionary', url: 'https://techdictionary.io/' },
-            { category: 'social', title: 'Quản lý Fanpage Queen Bus', desc: 'Xây dựng fanpage đạt 2.1K followers, reach trung bình 1,000/post (organic).', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+Fanpage+Queen+Bus', url: 'https://www.facebook.com/queenbus.com.vn' },
-            { category: 'social', title: 'Facebook Ads Queen Bus', desc: 'Tăng 45% doanh thu dịp lễ 30/4-1/5. Reach 132,000 người trong 8 tháng.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+Facebook+Ads', url: 'https://www.facebook.com/queenbus.com.vn' },
-            { category: 'social', title: 'Fanpage Heading for the Future', desc: 'Thu về 246 đơn đăng ký. Seeding đạt 48 form (34.5%), email marketing 13 form (9.4%).', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+dự+án+H4TF', url: '#' },
-            { category: 'social', title: 'Fanpage Cửa hàng Mẹ & Bé', desc: 'Quản lý và sáng tạo nội dung cho fanpage sản phẩm mẹ và bé.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+Fanpage+Vian+Kids', url: '#' },
-            { category: 'content', title: 'Content SEO Lalla Nail', desc: 'Viết bài chuẩn SEO cho website về dịch vụ làm đẹp, nail tại Đà Nẵng.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+Website+Lalla+Nail', url: 'https://lallanaildanang.com/' },
-            { category: 'content', title: 'Content SEO MOR Software', desc: 'Viết các bài viết chuyên sâu (khoảng 2000 từ) về lĩnh vực công nghệ phần mềm.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+bài+viết+MOR+Software', url: '#' },
-            { category: 'design', title: 'Thiết kế UX/UI (Cá nhân)', desc: 'Dự án cá nhân thiết kế giao diện người dùng và trải nghiệm người dùng bằng Figma.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+thiết+kế+Figma', url: '#' },
-            { category: 'plan', title: 'Kế hoạch Marketing H4TF', desc: 'Thực hiện nghiên cứu thị trường và đóng góp vào kế hoạch IMC cho dự án.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+kế+hoạch+H4TF', url: '#' },
-            { category: 'plan', title: 'Kế hoạch Marketing TEDx', desc: 'Xây dựng chiến lược marketing toàn diện cho sự kiện TEDxFPTUniversity Danang.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+kế+hoạch+TEDx', url: '#' },
-            { category: 'plan', title: 'Strategic Planning (Agency)', desc: 'Hỗ trợ xây dựng kế hoạch cho các đối tác khách sạn lớn như A La Carte, Paracel.', img: 'https://placehold.co/600x400/111827/3b82f6?text=Ảnh+kế+hoạch+Agency', url: '#' },
+            { category: 'seo', title: 'SEO Website Queen Bus', desc: 'Tăng trưởng traffic từ 0 lên 2,000/tháng và lợi nhuận tăng 461% trong 2 tháng.', img: 'https://i.postimg.cc/mksrzXGy/Screenshot-2025-08-22-200659.png', fit: 'contain', url: 'https://queenbus.com.vn/' },
+            { category: 'seo', title: 'SEO Website TechDictionary', desc: 'Phục hồi website sau án phạt Google, tăng traffic 19,200% (10 -> 1,900/ngày).', img: 'https://i.postimg.cc/Dw87ZkXK/Screenshot-2025-08-22-200751.png', fit: 'contain', url: 'https://techdictionary.io/' },
+            { category: 'social', title: 'Quản lý Fanpage Queen Bus', desc: 'Xây dựng fanpage đạt 2.1K followers, reach trung bình 1,000/post (organic).', img: 'https://i.postimg.cc/9X7TDKyZ/logo-queen-offical.png', url: 'https://www.facebook.com/queenbus.com.vn' },
+            { category: 'social', title: 'Facebook Ads Queen Bus', desc: 'Tăng 45% doanh thu dịp lễ 30/4-1/5. Reach 132,000 người trong 8 tháng.', img: 'https://i.postimg.cc/nrj1rLpD/ads.png', url: 'https://www.facebook.com/queenbus.com.vn' },
+            { category: 'social', title: 'Fanpage Heading for the Future', desc: 'Thu về 246 đơn đăng ký. Seeding đạt 48 form (34.5%), email marketing 13 form (9.4%).', img: 'https://i.postimg.cc/SRFGXhs1/337836654-604870881684354-5130837796378706172-n.jpg', fit: 'contain', url: '#' },
+            // CHANGE: Vian Kids image updated
+            { category: 'social', title: 'Fanpage Cửa hàng Mẹ & Bé', desc: 'Quản lý và sáng tạo nội dung cho fanpage sản phẩm mẹ và bé.', img: 'https://i.postimg.cc/HnvvVNqr/448851889-122153704448177579-6867482361762140093-n.jpg', url: '#' },
+            { category: 'content', title: 'Content SEO Lalla Nail', desc: 'Viết bài chuẩn SEO cho website về dịch vụ làm đẹp, nail tại Đà Nẵng.', img: 'https://i.postimg.cc/RZyJCTqX/453221862-122094480710452757-6258604672201949119-n.jpg', fit: 'contain', url: 'https://lallanaildanang.com/' },
+            { category: 'content', title: 'Content SEO MOR Software', desc: 'Viết các bài viết chuyên sâu (khoảng 2000 từ) về lĩnh vực công nghệ phần mềm.', img: 'https://i.postimg.cc/gJ478jCt/Screenshot-2025-08-22-200925.png', url: '#' },
+            // CHANGE: UX/UI image updated
+            { category: 'design', title: 'Thiết kế UX/UI (Cá nhân)', desc: 'Dự án cá nhân thiết kế giao diện người dùng và trải nghiệm người dùng bằng Figma.', img: 'https://i.postimg.cc/TPjbkDY0/figma-6hgn.png', url: '#' },
+            { category: 'plan', title: 'Kế hoạch Marketing TEDx', desc: 'Xây dựng chiến lược marketing toàn diện cho sự kiện TEDxFPTUniversity Danang.', img: 'https://i.postimg.cc/CxD6Jcyq/hult-news-tedx-702x395.jpg', url: '#' },
+            { category: 'plan', title: 'Strategic Planning (Agency)', desc: 'Hỗ trợ xây dựng kế hoạch cho các đối tác khách sạn lớn như A La Carte, Paracel.', img: 'https://i.postimg.cc/XqYYkZpr/301514599-614773760124224-8437376021417154842-n.jpg', url: '#' },
         ];
 
         const projectGrid = document.getElementById('project-grid');
@@ -462,9 +480,11 @@
                 const projectEl = document.createElement('div');
                 projectEl.className = `project-card glass-effect rounded-lg overflow-hidden flex flex-col ${p.category}`;
                 
+                const imageFitClass = p.fit === 'contain' ? 'object-contain' : '';
+
                 projectEl.innerHTML = `
-                    <div class="overflow-hidden">
-                        <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/FFFFFF?text=Image+Not+Found';">
+                    <div class="overflow-hidden img-container">
+                        <img src="${p.img}" alt="${p.title}" class="w-full h-full ${imageFitClass}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/FFFFFF?text=Image+Not+Found';">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-2 text-white">${p.title}</h3>
@@ -509,6 +529,20 @@
                 const filterValue = e.target.getAttribute('data-filter');
                 populateProjects(filterValue);
             }
+        });
+        
+        const fadeInSections = document.querySelectorAll('.fade-in-section');
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeInSections.forEach(section => {
+            sectionObserver.observe(section);
         });
 
         populateProjects();
